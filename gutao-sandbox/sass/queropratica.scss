@@ -4,6 +4,8 @@ $color-base-01: #F9F9F9;
 $color-base-image: #55595C;
 $color-white: #fff;
 $bg-light-gray: #F6F6F6;
+$color-black: #000;
+$color-link-current: #1C7CD5;
 
 
 ::-webkit-scrollbar-track {
@@ -118,5 +120,37 @@ $bg-light-gray: #F6F6F6;
 
     .card-text {
         margin: 0;
+    }
+}
+
+.querop-step {
+    cursor: not-allowed;
+    text-decoration: none;
+    opacity: 0.4;
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 9px;
+    display: inline-block;
+    
+    &:hover {
+        text-decoration: none;
+        color: #000;
+    }
+
+    &.querop-step__able,
+    &.querop-step__current {
+        cursor: pointer;
+        opacity: 1;
+        font-weight: 600;
+    }
+    
+    &.querop-step__current {
+        color: $color-link-current;
+    }
+}
+
+.querop-form-cadastro__ptojeto {
+    .form-group {
+        margin-bottom: 39px;
     }
 }
