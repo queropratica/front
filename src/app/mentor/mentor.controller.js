@@ -28,6 +28,13 @@
             {title: 'Alohomora', summary: 'Alohomora do Adalon', owner: 'Owner Fas', publishedAt: '29/05/2019'}
         ]
 
+        vm.mentors = [
+            {name: 'Alohomora', jobDescription: 'Alohomora do Agreste', company: 'Acme'},
+            {name: 'Alohomora', jobDescription: 'Alohomora do Campo', company: 'Acme'},
+            {name: 'Alohomora', jobDescription: 'Alohomora do Alom', company: 'Acme'},
+            {name: 'Alohomora', jobDescription: 'Alohomora do Adalon', company: 'Acme'}
+        ]
+
         projectFactory.load()
             .$promise.then(function (projects) {
                 vm.subjects = projects
