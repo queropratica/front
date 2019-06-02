@@ -238,3 +238,18 @@
   padding-bottom: 210px !important;
   background-color: #fff;
 }
+
+/* line 230, ../sass/queropratica.scss */
+.querop-header-pg {
+  padding-bottom: 100px !important;
+}
+
+/* line 233, ../sass/queropratica.scss */
+.querop-header-pg + section > .container {
+  background-color: #fff;
+  margin-top: -100px;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  padding: 0 38px;
+}
