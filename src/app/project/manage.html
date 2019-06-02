@@ -36,32 +36,37 @@
             <div class="row py-5">
                 <ul class="col-md-4">
                     <li class="querop-step__li">
-                        <a href="#" class="querop-step querop-step__able">Ante-Projeto <span
+                        <a class="querop-step">Ante-Projeto <span
                                 class="badge badge-pill badge-success">Ok</span></a>
                     </li>
                     <li class="querop-step__li">
-                        <a href="#" class="querop-step querop-step__able">Diagnóstico de Processo <span
+                        <a class="querop-step">Diagnóstico de Processo <span
                                 class="badge badge-pill badge-success">Ok</span></a>
                     </li>
-                    <li class="querop-step__li querop-step__li--active">
-                        <a href="#" class="querop-step querop-step__able">Levantamento de Soluções <span
-                                class="badge badge-pill badge-warning">1</span></a>
+                    <li class="querop-step__li" ng-click="projectManageController.changeForm('levantamento')"
+                        ng-class="{'active': projectManageController.displayLevantamento}">
+                        <a class="querop-step">Levantamento de Soluções <span
+                                class="badge badge-pill badge-success">Ok</span></a>
                     </li>
                     <li class="querop-step__li">
-                        <a href="#" class="querop-step querop-step__able">Desenho do Novo Processo</a>
+                        <a class="querop-step">Desenho do Novo Processo <span
+                                class="badge badge-pill badge-success">Ok</span></a>
                     </li>
                     <li class="querop-step__li">
-                        <a href="#" class="querop-step querop-step__able">Desenho do Novo Processo</a>
+                        <a class="querop-step">Desenho do Novo Processo <span
+                                class="badge badge-pill badge-success">Ok</span></a>
                     </li>
                     <li class="querop-step__li">
-                        <a href="#" class="querop-step querop-step__able">Aplicação do Novo Processo</a>
+                        <a class="querop-step">Aplicação do Novo Processo <span
+                                class="badge badge-pill badge-success">Ok</span></a>
                     </li>
-                    <li class="querop-step__li">
-                        <a href="#" class="querop-step querop-step__able">Relatório</a>
+                    <li class="querop-step__li" ng-click="projectManageController.changeForm('relatorio')"
+                        ng-class="{'active': projectManageController.displayRelatorio}">
+                        <a class="querop-step">Relatório</a>
                     </li>
                 </ul>
 
-                <div class="col-md-8">
+                <div class="col-md-8" ng-if="projectManageController.displayLevantamento">
                     <h2 class="h3">Levantamento de Problemas</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis odio nibh, in venenatis ante
                         lobortis sit amet. In posuere viverra cursus. Vestibulum rutrum turpis vel dui tempor, nec
@@ -134,6 +139,37 @@
                         <div class="tab-pane fade" id="pills-mensagem" role="tabpanel"
                             aria-labelledby="pills-mensagem-tab">DISCUSS</div>
                     </div>
+                </div>
+
+                <div class="col-md-8" ng-if="projectManageController.displayRelatorio">
+                    <h2 class="h3">Relatório</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis odio nibh, in venenatis ante
+                        lobortis sit amet. In posuere viverra cursus. Vestibulum rutrum turpis vel dui tempor, nec
+                        faucibus neque bibendum. Quisque in dolor turpis. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Aenean efficitur augue et posuere euismod. Ut odio sapien, aliquam eu commodo
+                        eget, cursus nec nibh.</p>
+
+                    <hr>
+
+                    <form class="querop-form-cadastro__ptojeto">
+                        <div class="form-group">
+                            <label for="projectSummary" class="h5">O que foi feito:</label>
+                            <textarea class="form-control" id="projectSummary" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectSummaryHow" class="h5">Como foi feito:</label>
+                            <textarea class="form-control" id="projectSummaryHow" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectSummaryConclusions" class="h5">Conclusões e Resultados:</label>
+                            <textarea class="form-control" id="projectSummaryConclusions" rows="3"></textarea>
+                        </div>
+
+                        <input type="submit" value="Próximo" class="btn btn-primary">
+
+                    </form>
                 </div>
 
             </div>

@@ -12,22 +12,14 @@
         vm.changeForm = changeForm
 
         function changeForm (type) {
-            if(type === 'introduction') {
-                vm.displayIntrodution = true
-                vm.displaySchedule = false
-                vm.displayAppliedSubjects = false
+            if(type === 'levantamento') {
+                vm.displayLevantamento = true
+                vm.displayRelatorio = false
             }
 
-            if(type === 'subjects') {
-                vm.displayAppliedSubjects = true
-                vm.displayIntrodution = false
-                vm.displaySchedule = false
-            }
-
-            if(type === 'schedule') {
-                vm.displaySchedule = true
-                vm.displayAppliedSubjects = false
-                vm.displayIntrodution = false
+            if(type === 'relatorio') {
+                vm.displayLevantamento = false
+                vm.displayRelatorio = true
             }
         }
 

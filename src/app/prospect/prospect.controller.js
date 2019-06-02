@@ -3,22 +3,11 @@
 
     angular
         .module('angularSeedApp')
-        .controller('HomeController', HomeController);
+        .controller('ProspectController', ProspectController);
 
     /** @ngInject */
-    function HomeController(projectFactory, $scope, $state) {
+    function ProspectController(projectFactory, $scope) {
         var vm = this;
-
-        vm.goToStudent = goToStudent
-        vm.goToMentor = goToMentor
-
-        function  goToStudent () {
-            $state.go('student')
-        }
-
-        function  goToMentor () {
-            $state.go('mentor')
-        }
 
         $scope.disqusConfig = {
             disqus_shortname: 'https-queropratica-github-io',

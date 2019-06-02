@@ -14,6 +14,12 @@
                 controller: 'HomeController',
                 controllerAs: 'home'
             })
+            .state('prospect', {
+                url: '/prospect',
+                templateUrl: 'app/prospect/prospect.html',
+                controller: 'ProspectController',
+                controllerAs: 'prospect'
+            })
             .state('mentor', {
                 url: '/mentor',
                 templateUrl: 'app/mentor/mentor.html',
