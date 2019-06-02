@@ -30,7 +30,7 @@
                 text: "Agora o projeto esta publico e podera ser acessado por qualquer estudante",
                 type: "success",
                 showCancelButton: false,
-                confirmButtonColor: "#A5DC86",
+                confirmButtonColor: "#1C7CD5",
                 confirmButtonText: "Ver projeto publicado !",
                 closeOnConfirm: true
             },
