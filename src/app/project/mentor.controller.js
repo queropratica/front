@@ -3,18 +3,17 @@
 
     angular
         .module('angularSeedApp')
-        .controller('StudentController', StudentController);
+        .controller('ProjectNewController', ProjectNewController);
 
     /** @ngInject */
-    function StudentController(userFactory) {
+    function ProjectNewController(projectFactory, $scope) {
         var vm = this;
 
-        vm.mentors = [
-            {name: 'Alohomora', jobDescription: 'Alohomora do Agreste', company: 'Acme'},
-            {name: 'Alohomora', jobDescription: 'Alohomora do Campo', company: 'Acme'},
-            {name: 'Alohomora', jobDescription: 'Alohomora do Alom', company: 'Acme'},
-            {name: 'Alohomora', jobDescription: 'Alohomora do Adalon', company: 'Acme'}
-        ]
+        $scope.disqusConfig = {
+            disqus_shortname: 'https-queropratica-github-io',
+            disqus_identifier: 'mentor_screen_',
+            disqus_url: 'https://queropratica.github.io'
+        };
 
         vm.projects = [
             {title: 'Alohomora', summary: 'Alohomora do Agreste', owner: 'Owner PO', publishedAt: '25/05/2019'},
@@ -23,9 +22,9 @@
             {title: 'Alohomora', summary: 'Alohomora do Adalon', owner: 'Owner Fas', publishedAt: '29/05/2019'}
         ]
 
-        userFactory.getMentors()
-            .$promise.then(function (mentors) {
-                //vm.mentors = mentors
+        projectFactory.load()
+            .$promise.then(function (projects) {
+                vm.subjects = projects
             })
     }
 })();

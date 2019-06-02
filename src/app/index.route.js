@@ -14,6 +14,12 @@
                 controller: 'MentorController',
                 controllerAs: 'mentor'
             })
+            .state('projectCreation', {
+                url: '/project/new',
+                templateUrl: 'app/project/new.html',
+                controller: 'ProjectNewController',
+                controllerAs: 'newProject'
+            })
             .state('student', {
                 url: '/student',
                 templateUrl: 'app/student/student.html',
