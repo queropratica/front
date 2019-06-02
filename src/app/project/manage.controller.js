@@ -57,7 +57,7 @@
 
         $scope.disqusConfig = {
             disqus_shortname: 'https-queropratica-github-io',
-            disqus_identifier: 'mentor_screen_',
+            disqus_identifier: 'manager_screen_123',
             disqus_url: 'https://queropratica.github.io'
         };
 

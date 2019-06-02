@@ -13,14 +13,14 @@
                     <div class="row no-gutters">
                         <div class="col-md-10">
                             <div class="row">
-                                <p class="col-12 title-card-persona">MENTOR</p>
+                                <p class="col-12 title-card-persona">ALUNO</p>
                                 <div class="col-md-4">
-                                    <img src="" class="card-img rounded-circle card-persona-pic" alt="...">
+                                    <img src="/assets/images/aluno.jpg" class="card-img rounded-circle card-persona-pic" alt="...">
                                 </div>
                                 <div class="col-md-8">
-                                    <h5 class="card-title title-card-persona__name"><strong>José Luis</strong></h5>
-                                    <P class="title-card-persona__infos">Gerente de Projetos</P>
-                                    <P class="title-card-persona__infos">General Electric</P>
+                                    <h5 class="card-title title-card-persona__name"><strong>Guilherme Mantorini</strong></h5>
+                                    <P class="title-card-persona__infos">Estudante de Engenharia de materiais</P>
+                                    <P class="title-card-persona__infos">4º Ano</P>
                                 </div>
                             </div>
                         </div>
@@ -35,29 +35,25 @@
             <h2 class="h4 mt-5">Atividades do Projeto</h2>
             <div class="row py-5">
                 <ul class="col-md-4">
-                    <li class="querop-step__li">
-                        <a class="querop-step">Ante-Projeto <span
+                    <li class="querop-step__li" ng-click='vm.isAnteProjetoClicked = true'>
+                        <a class="querop-step">Ante-Projeto <span ng-if='vm.isAnteProjetoClicked'
                                 class="badge badge-pill badge-success">Ok</span></a>
                     </li>
-                    <li class="querop-step__li">
-                        <a class="querop-step">Diagnóstico de Processo <span
+                    <li class="querop-step__li" ng-click='vm.isDiagnosticoClicked = true'>
+                        <a class="querop-step">Diagnóstico de Processo <span ng-if='vm.isDiagnosticoClicked'
                                 class="badge badge-pill badge-success">Ok</span></a>
                     </li>
-                    <li class="querop-step__li" ng-click="projectManageController.changeForm('levantamento')"
+                    <li class="querop-step__li" ng-click="projectManageController.changeForm('levantamento'); vm.isLevantamentoClicked = true"
                         ng-class="{'active': projectManageController.displayLevantamento}">
-                        <a class="querop-step">Levantamento de Soluções <span
+                        <a class="querop-step">Levantamento de Soluções <span ng-if='vm.isLevantamentoClicked'
                                 class="badge badge-pill badge-success">Ok</span></a>
                     </li>
-                    <li class="querop-step__li">
-                        <a class="querop-step">Desenho do Novo Processo <span
+                    <li class="querop-step__li" ng-click='vm.isDesenhoClicked = true'>
+                        <a class="querop-step">Desenho do Novo Processo <span ng-if='vm.isDesenhoClicked'
                                 class="badge badge-pill badge-success">Ok</span></a>
                     </li>
-                    <li class="querop-step__li">
-                        <a class="querop-step">Desenho do Novo Processo <span
-                                class="badge badge-pill badge-success">Ok</span></a>
-                    </li>
-                    <li class="querop-step__li">
-                        <a class="querop-step">Aplicação do Novo Processo <span
+                    <li class="querop-step__li" ng-click='vm.isAplicacaoClicked = true'>
+                        <a class="querop-step">Aplicação do Novo Processo <span ng-if='vm.isAplicacaoClicked'
                                 class="badge badge-pill badge-success">Ok</span></a>
                     </li>
                     <li class="querop-step__li" ng-click="projectManageController.changeForm('relatorio')"
@@ -139,6 +135,10 @@
                         <div class="tab-pane fade" id="pills-mensagem" role="tabpanel"
                             aria-labelledby="pills-mensagem-tab">DISCUSS</div>
                     </div>
+
+                    <section>
+                        <dir-disqus config="disqusConfig"></dir-disqus>
+                    </section>
                 </div>
 
                 <div class="col-md-8" ng-if="projectManageController.displayRelatorio">
