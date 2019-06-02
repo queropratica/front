@@ -16,15 +16,19 @@
         };
 
         vm.projects = [
-            {title: 'Alohomora', summary: 'Alohomora do Agreste', owner: 'Owner PO', publishedAt: '25/05/2019'},
-            {title: 'Alohomora', summary: 'Alohomora do Campo', owner: 'Owner Project', publishedAt: '26/05/2019'},
-            {title: 'Alohomora', summary: 'Alohomora do Alom', owner: 'Owner Tes', publishedAt: '21/05/2019'},
-            {title: 'Alohomora', summary: 'Alohomora do Adalon', owner: 'Owner Fas', publishedAt: '29/05/2019'}
+            {title: 'Planejando a criação de uma empresa', summary: 'Administração, Todos', owner: 'Luis Roberto', publishedAt: '24/05/2019'},
+            {title: 'Aplicando microeconomia na empresa', summary: 'Administração', owner: 'Paulo Macedo', publishedAt: '26/07/2019'},
+            {title: 'Como gerir a construção de uma casa', summary: 'Administração', owner: 'Lucas Roberto', publishedAt: '13/02/2019'},
+            {title: 'Analisando uma política pública', summary: 'Engenharia de Produção', owner: 'José Luis', publishedAt: '01/07/2019'}
         ]
 
-        projectFactory.load()
-            .$promise.then(function (projects) {
-                vm.subjects = projects
-            })
+        vm.subjects = [
+            { _id: 1, name: 'Lean'},
+            { _id: 2, name: 'Processos'},
+            { _id: 3, name: '4º Ano'},
+            { _id: 4, name: 'Lean'},
+            { _id: 5, name: 'Processos'},
+            { _id: 6, name: '4º Ano'}
+        ]
     }
 })();
