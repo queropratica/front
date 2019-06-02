@@ -163,3 +163,7 @@
 .querop-form-cadastro__ptojeto .form-group {
   margin-bottom: 39px;
 }
+/* line 157, ../sass/queropratica.scss */
+.querop-form-cadastro__ptojeto label.h5 {
+  margin-bottom: 16px;
+}
