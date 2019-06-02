@@ -3,7 +3,9 @@
     "version": "0.0.0",
     "dependencies": {},
     "scripts": {
-        "test": "gulp test"
+        "build": "./node_modules/.bin/gulp serve",
+        "start": "npm run build && ./node_modules/.bin/gulp serve",
+        "deploy": "npm run build && ./node_modules/.bin/gulp deploy"
     },
     "devDependencies": {
         "browser-sync": "~2.7.12",
