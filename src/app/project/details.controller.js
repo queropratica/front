@@ -3,15 +3,14 @@
 
     angular
         .module('angularSeedApp')
-        .controller('ProjectManageController', ProjectManageController);
+        .controller('ProjectDetailsController', ProjectDetailsController);
 
     /** @ngInject */
-    function ProjectManageController(projectFactory, $scope, $state, SweetAlert) {
+    function ProjectDetailsController(projectFactory, $scope, $state, SweetAlert) {
         var vm = this;
 
         vm.changeForm = changeForm
         vm.goToProspect = goToProspect
-        vm.goToSuccess = goToSuccess
 
         function changeForm(type) {
             if (type === 'levantamento') {
@@ -40,21 +39,6 @@
                 });
         }
 
-        function goToSuccess() {
-            SweetAlert.swal({
-                title: "Interesse registrado com sucesso !",
-                text: "O mentor desse projeto acabou de ser avisado",
-                type: "success",
-                showCancelButton: false,
-                confirmButtonColor: "#A5DC86",
-                confirmButtonText: "Ok !",
-                closeOnConfirm: true
-            },
-                function () {
-                    $state.go('manageProject');
-                });
-        }
-
         $scope.disqusConfig = {
             disqus_shortname: 'https-queropratica-github-io',
             disqus_identifier: 'mentor_screen_',
@@ -62,10 +46,10 @@
         };
 
         vm.projects = [
-            { title: 'Planejando a criação de uma empresa', summary: 'Administração, Todos', owner: 'Luis Roberto', publishedAt: '24/05/2019' },
-            { title: 'Aplicando microeconomia na empresa', summary: 'Administração', owner: 'Paulo Macedo', publishedAt: '26/07/2019' },
-            { title: 'Como gerir a construção de uma casa', summary: 'Administração', owner: 'Lucas Roberto', publishedAt: '13/02/2019' },
-            { title: 'Analisando uma política pública', summary: 'Engenharia de Produção', owner: 'José Luis', publishedAt: '01/07/2019' }
+            {title: 'Planejando a criação de uma empresa', summary: 'Administração, Todos', owner: 'Luis Roberto', publishedAt: '24/05/2019'},
+            {title: 'Aplicando microeconomia na empresa', summary: 'Administração', owner: 'Paulo Macedo', publishedAt: '26/07/2019'},
+            {title: 'Como gerir a construção de uma casa', summary: 'Administração', owner: 'Lucas Roberto', publishedAt: '13/02/2019'},
+            {title: 'Analisando uma política pública', summary: 'Engenharia de Produção', owner: 'José Luis', publishedAt: '01/07/2019'}
         ]
 
         projectFactory.load()

@@ -22,7 +22,14 @@
         return directive;
 
         /** @ngInject */
-        function MainCardController() {
+        function MainCardController($state) {
+            var vm = this
+
+            vm.goToProjectDetails = goToProjectDetails
+
+            function goToProjectDetails () {
+                $state.go('detailsProject')
+            }
         }
     }
 
