@@ -36,7 +36,7 @@
                 closeOnConfirm: true
             },
                 function () {
-                    $state.go('mentor');
+                    $state.go('prospect');
                 });
         }
 
