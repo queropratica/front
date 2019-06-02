@@ -6,6 +6,7 @@ $color-white: #fff;
 $bg-light-gray: #F6F6F6;
 $color-black: #000;
 $color-link-current: #1C7CD5;
+$color-header-bg: #3870E1;
 
 
 ::-webkit-scrollbar-track {
@@ -75,9 +76,30 @@ $color-link-current: #1C7CD5;
 }
 
 .querop-header-pg {
+    background-color: $color-header-bg;
     min-height: 225px;
     display: flex;
     align-items: flex-end;
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6,
+    p,
+    a,
+    label,
+    strong,
+    small {
+        color: $color-white;
+    }
 }
 
 .querop-card-destaque-aluno {
@@ -156,5 +178,13 @@ $color-link-current: #1C7CD5;
 
     label.h5 {
         margin-bottom: 16px;
+    }
+}
+
+.navbar {
+    background-color: $color-header-bg !important;
+
+    a {
+        color: $color-white !important;
     }
 }
