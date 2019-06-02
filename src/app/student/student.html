@@ -34,9 +34,8 @@
                             </div>
                         </div>
                         <div class="card-deck">
-                            <div ng-repeat="project in studentController.projects">
-                                <main-card item="project"></main-card>
-                            </div>
+                            <main-card item="project" class="card" ng-repeat="project in studentController.projects">
+                            </main-card>
                         </div>
                     </div>
 
