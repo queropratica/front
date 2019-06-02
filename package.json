@@ -5,7 +5,8 @@
     "scripts": {
         "build": "./node_modules/.bin/gulp",
         "start": "npm run build && ./node_modules/.bin/gulp serve",
-        "deploy": "npm run build && ./node_modules/.bin/gulp deploy"
+        "deploy": "npm run build && ./node_modules/.bin/gulp deploy",
+        "dist": "npm run build && ./node_modules/.bin/gulp serve:dist"
     },
     "devDependencies": {
         "browser-sync": "~2.7.12",

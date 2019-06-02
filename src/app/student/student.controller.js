@@ -6,22 +6,27 @@
         .controller('StudentController', StudentController);
 
     /** @ngInject */
-    function StudentController(userFactory) {
+    function StudentController(userFactory, $state) {
         var vm = this;
 
+        vm.goToProjectDetails = goToProjectDetails
+
         vm.mentors = [
-            {name: 'Alohomora', jobDescription: 'Alohomora do Agreste', company: 'Acme'},
-            {name: 'Alohomora', jobDescription: 'Alohomora do Campo', company: 'Acme'},
-            {name: 'Alohomora', jobDescription: 'Alohomora do Alom', company: 'Acme'},
-            {name: 'Alohomora', jobDescription: 'Alohomora do Adalon', company: 'Acme'}
+            {name: 'Claudio Brandão', jobDescription: 'Engenharia de Produção', company: 'José Luis'},
+            {name: 'Luis Noletto', jobDescription: 'Administração', company: 'Lucas Roberto'},
+            {name: 'Paulo Alias', jobDescription: 'Administração, Todos', company: 'Luis Roberto'},
+            {name: 'Thales Marra', jobDescription: 'Administração', company: 'Paulo Macedo'}
         ]
 
         vm.projects = [
-            {title: 'Alohomora', summary: 'Alohomora do Agreste', owner: 'Owner PO', publishedAt: '25/05/2019'},
-            {title: 'Alohomora', summary: 'Alohomora do Campo', owner: 'Owner Project', publishedAt: '26/05/2019'},
-            {title: 'Alohomora', summary: 'Alohomora do Alom', owner: 'Owner Tes', publishedAt: '21/05/2019'},
-            {title: 'Alohomora', summary: 'Alohomora do Adalon', owner: 'Owner Fas', publishedAt: '29/05/2019'}
+            {title: 'Planejando a criação de uma empresa', summary: 'Administração, Todos', owner: 'Luis Roberto', publishedAt: '24/05/2019'},
+            {title: 'Aplicando microeconomia na empresa', summary: 'Administração', owner: 'Paulo Macedo', publishedAt: '26/07/2019'},
+            {title: 'Como gerir a construção de uma casa', summary: 'Administração', owner: 'Lucas Roberto', publishedAt: '13/02/2019'}
         ]
+
+        function goToProjectDetails () {
+            $state.go('detailsProject')
+        }
 
         userFactory.getMentors()
             .$promise.then(function (mentors) {
