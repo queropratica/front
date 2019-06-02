@@ -229,6 +229,10 @@ $color-header-bg: #3870E1;
 
 .querop-header-pg {
     padding-bottom: 100px !important;
+    background-image: url("../img/folhas.png");
+    background-repeat: no-repeat;
+    background-position: center 77%;
+    background-size: 38%;
 }
 .querop-header-pg + section > .container {
     background-color: #fff;
@@ -239,8 +243,16 @@ $color-header-bg: #3870E1;
     padding: 0 38px;
 }
 
-.querop-header__bg__leafs {
-    background-image: url("../img/folhas.png");
+.querop-header__bg__menina-deitada {
+    background-image: url("../img/garota-deitada.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 69% -122px;
+    background-size: 497px;
+}
+
+.querop-header__bg__menina-sentada {
+    background-image: url("../img/menina-sentada.png");
+    background-repeat: no-repeat;
+    background-position: 69% -55px;
+    background-size: 497px;
 }

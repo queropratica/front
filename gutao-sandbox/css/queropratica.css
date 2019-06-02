@@ -242,9 +242,13 @@
 /* line 230, ../sass/queropratica.scss */
 .querop-header-pg {
   padding-bottom: 100px !important;
+  background-image: url("../img/folhas.png");
+  background-repeat: no-repeat;
+  background-position: center 77%;
+  background-size: 38%;
 }
 
-/* line 233, ../sass/queropratica.scss */
+/* line 237, ../sass/queropratica.scss */
 .querop-header-pg + section > .container {
   background-color: #fff;
   margin-top: -100px;
@@ -254,9 +258,18 @@
   padding: 0 38px;
 }
 
-/* line 242, ../sass/queropratica.scss */
-.querop-header__bg__leafs {
-  background-image: url("../img/folhas.png");
+/* line 246, ../sass/queropratica.scss */
+.querop-header__bg__menina-deitada {
+  background-image: url("../img/garota-deitada.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 69% -122px;
+  background-size: 497px;
+}
+
+/* line 253, ../sass/queropratica.scss */
+.querop-header__bg__menina-sentada {
+  background-image: url("../img/menina-sentada.png");
+  background-repeat: no-repeat;
+  background-position: 69% -55px;
+  background-size: 497px;
 }
