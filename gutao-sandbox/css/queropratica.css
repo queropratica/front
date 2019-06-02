@@ -175,35 +175,32 @@
   cursor: pointer;
   opacity: 1;
   font-weight: 600;
-}
-/* line 173, ../sass/queropratica.scss */
-.querop-step.current {
   color: #1C7CD5 !important;
 }
 
-/* line 179, ../sass/queropratica.scss */
+/* line 176, ../sass/queropratica.scss */
 .querop-form-cadastro__ptojeto .form-group {
   margin-bottom: 39px;
 }
-/* line 183, ../sass/queropratica.scss */
+/* line 180, ../sass/queropratica.scss */
 .querop-form-cadastro__ptojeto label.h5 {
   margin-bottom: 16px;
 }
 
-/* line 188, ../sass/queropratica.scss */
+/* line 185, ../sass/queropratica.scss */
 .navbar {
   background-color: #3870E1 !important;
 }
-/* line 191, ../sass/queropratica.scss */
+/* line 188, ../sass/queropratica.scss */
 .navbar a {
   color: #fff !important;
 }
 
-/* line 196, ../sass/queropratica.scss */
+/* line 193, ../sass/queropratica.scss */
 .querop-step__li {
   padding: 8px;
 }
-/* line 199, ../sass/queropratica.scss */
+/* line 196, ../sass/queropratica.scss */
 .querop-step__li.querop-step__li--active {
   background-color: #F2F2F2;
   box-shadow: -4px 0 0 #3870E1;

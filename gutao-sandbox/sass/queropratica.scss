@@ -168,9 +168,6 @@ $color-header-bg: #3870E1;
         cursor: pointer;
         opacity: 1;
         font-weight: 600;
-    }
-    
-    &.current {
         color: $color-link-current !important;
     }
 }
