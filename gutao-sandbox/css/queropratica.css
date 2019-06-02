@@ -1,0 +1,53 @@
+/* line 5, ../sass/queropratica.scss */
+::-webkit-scrollbar-track {
+  background-color: #707070;
+}
+
+/* line 8, ../sass/queropratica.scss */
+::-webkit-scrollbar {
+  width: 6px;
+  background: #303030;
+}
+
+/* line 12, ../sass/queropratica.scss */
+::-webkit-scrollbar-thumb {
+  background: #303030;
+  border-radius: 5px;
+}
+
+/* line 17, ../sass/queropratica.scss */
+.title-card-persona {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* line 22, ../sass/queropratica.scss */
+.title-card-persona__name {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+/* line 27, ../sass/queropratica.scss */
+.title-card-persona__infos {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+/* line 32, ../sass/queropratica.scss */
+.card-persona-pic {
+  background-color: #F9F9F9;
+  width: 100%;
+}
+
+/* line 37, ../sass/queropratica.scss */
+.header-wrapper__personas {
+  display: flex;
+  align-items: center;
+}
+
+/* line 42, ../sass/queropratica.scss */
+.form-readlall-article {
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}

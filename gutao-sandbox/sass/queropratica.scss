@@ -1,0 +1,44 @@
+@import "compass/css3";
+
+$color-base-01: #F9F9F9;
+
+::-webkit-scrollbar-track {
+    background-color: #707070;
+ }
+ ::-webkit-scrollbar {
+    width: 6px;
+    background: #303030;
+ }
+ ::-webkit-scrollbar-thumb {
+    background: #303030;
+    border-radius:5px;
+ }
+
+ .title-card-persona {
+     font-size: 13px;
+     font-weight: bold;
+ }
+
+.title-card-persona__name {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.title-card-persona__infos {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.card-persona-pic {
+    background-color: $color-base-01;
+    width: 100%;
+}
+
+.header-wrapper__personas {
+    display: flex;
+    align-items: center;
+}
+
+.form-readlall-article {
+    @include box-shadow (0 3px 6px rgba(0,0,0,.16));
+}
