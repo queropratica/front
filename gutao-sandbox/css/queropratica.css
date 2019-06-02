@@ -52,37 +52,38 @@
 
 /* line 53, ../sass/queropratica.scss */
 .card-destaque-aluno {
+  background-color: #2f2f2f;
   min-height: 399px;
   display: flex;
   position: relative;
   border-radius: 5px;
   overflow: hidden;
 }
-/* line 60, ../sass/queropratica.scss */
+/* line 61, ../sass/queropratica.scss */
 .card-destaque-aluno > .card-img-top {
-  background-color: #55595C;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   bottom: 0;
   left: 0;
+  opacity: .1;
 }
-/* line 71, ../sass/queropratica.scss */
+/* line 72, ../sass/queropratica.scss */
 .card-destaque-aluno .card-title,
 .card-destaque-aluno strong,
 .card-destaque-aluno .card-text {
   color: #fff;
 }
 
-/* line 78, ../sass/queropratica.scss */
+/* line 79, ../sass/queropratica.scss */
 .querop-header-pg {
   background-color: #3870E1;
   min-height: 225px;
   display: flex;
   align-items: flex-end;
 }
-/* line 84, ../sass/queropratica.scss */
+/* line 85, ../sass/queropratica.scss */
 .querop-header-pg h1,
 .querop-header-pg .h1,
 .querop-header-pg h2,
@@ -102,75 +103,75 @@
 .querop-header-pg small {
   color: #fff;
 }
-/* line 104, ../sass/queropratica.scss */
+/* line 105, ../sass/queropratica.scss */
 .querop-header-pg .btn-light {
   color: #007bff;
 }
-/* line 107, ../sass/queropratica.scss */
+/* line 108, ../sass/queropratica.scss */
 .querop-header-pg .btn-light:hover {
   color: #007bff;
 }
 
-/* line 113, ../sass/queropratica.scss */
+/* line 114, ../sass/queropratica.scss */
 .querop-card-destaque-aluno {
   display: flex;
   align-items: flex-end;
   position: relative;
 }
-/* line 118, ../sass/queropratica.scss */
+/* line 119, ../sass/queropratica.scss */
 .querop-card-destaque-aluno > .d-flex {
   flex-direction: column;
   width: 100%;
 }
 
-/* line 124, ../sass/queropratica.scss */
+/* line 125, ../sass/queropratica.scss */
 .querop-wrapper-destaque-card-aluno__footer {
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-/* line 131, ../sass/queropratica.scss */
+/* line 132, ../sass/queropratica.scss */
 .card .btn {
   margin: 0 auto 15px 21px;
 }
 
-/* line 136, ../sass/queropratica.scss */
+/* line 137, ../sass/queropratica.scss */
 .bg-light-gray {
   background-color: #F6F6F6;
 }
 
-/* line 140, ../sass/queropratica.scss */
+/* line 141, ../sass/queropratica.scss */
 .img-profile-mock {
   background-color: #55595C;
   width: 80px;
   height: 80px;
 }
 
-/* line 146, ../sass/queropratica.scss */
+/* line 147, ../sass/queropratica.scss */
 .querop-card-persona-mock {
   align-items: center;
   text-align: center;
   padding-top: 23px;
 }
-/* line 151, ../sass/queropratica.scss */
+/* line 152, ../sass/queropratica.scss */
 .querop-card-persona-mock .card-text {
   margin: 0;
 }
 
-/* line 156, ../sass/queropratica.scss */
+/* line 157, ../sass/queropratica.scss */
 .querop-step {
   color: #000;
   font-size: 17px;
   margin-bottom: 9px;
   display: inline-block;
 }
-/* line 162, ../sass/queropratica.scss */
+/* line 163, ../sass/queropratica.scss */
 .querop-step:hover {
   text-decoration: none;
   color: #000;
 }
-/* line 167, ../sass/queropratica.scss */
+/* line 168, ../sass/queropratica.scss */
 .querop-step.current {
   cursor: pointer;
   opacity: 1;
@@ -178,29 +179,29 @@
   color: #1C7CD5 !important;
 }
 
-/* line 176, ../sass/queropratica.scss */
+/* line 177, ../sass/queropratica.scss */
 .querop-form-cadastro__ptojeto .form-group {
   margin-bottom: 39px;
 }
-/* line 180, ../sass/queropratica.scss */
+/* line 181, ../sass/queropratica.scss */
 .querop-form-cadastro__ptojeto label.h5 {
   margin-bottom: 16px;
 }
 
-/* line 185, ../sass/queropratica.scss */
+/* line 186, ../sass/queropratica.scss */
 .navbar {
   background-color: #3870E1 !important;
 }
-/* line 188, ../sass/queropratica.scss */
+/* line 189, ../sass/queropratica.scss */
 .navbar a {
   color: #fff !important;
 }
 
-/* line 193, ../sass/queropratica.scss */
+/* line 194, ../sass/queropratica.scss */
 .querop-step__li {
   padding: 8px;
 }
-/* line 196, ../sass/queropratica.scss */
+/* line 197, ../sass/queropratica.scss */
 .querop-step__li.active {
   background-color: #F2F2F2;
   box-shadow: -4px 0 0 #3870E1;
