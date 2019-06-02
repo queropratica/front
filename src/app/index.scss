@@ -24,7 +24,9 @@ $color-base-01: #F9F9F9;
 $color-base-image: #55595C;
 $color-white: #fff;
 $bg-light-gray: #F6F6F6;
-
+$color-black: #000;
+$color-link-current: #1C7CD5;
+$color-header-bg: #3870E1;
 
 ::-webkit-scrollbar-track {
     background-color: #707070;
@@ -93,9 +95,38 @@ $bg-light-gray: #F6F6F6;
 }
 
 .querop-header-pg {
+    background-color: $color-header-bg;
     min-height: 225px;
     display: flex;
     align-items: flex-end;
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6,
+    p,
+    a,
+    label,
+    strong,
+    small {
+        color: $color-white;
+    }
+
+    .btn-light {
+        color: #007bff;
+
+        &:hover {
+            color: #007bff;
+        }
+    }
 }
 
 .querop-card-destaque-aluno {
@@ -138,5 +169,51 @@ $bg-light-gray: #F6F6F6;
 
     .card-text {
         margin: 0;
+    }
+}
+
+.querop-step {
+    cursor: pointer;
+    color: #000;
+    font-size: 17px;
+    margin-bottom: 9px;
+    display: inline-block;
+    
+    &:hover {
+        text-decoration: none;
+        color: #000;
+    }
+
+    &.current {
+        opacity: 1;
+        font-weight: 600;
+        color: $color-link-current !important;
+    }
+}
+
+.querop-form-cadastro__ptojeto {
+    .form-group {
+        margin-bottom: 39px;
+    }
+
+    label.h5 {
+        margin-bottom: 16px;
+    }
+}
+
+.navbar {
+    background-color: $color-header-bg !important;
+
+    a {
+        color: $color-white !important;
+    }
+}
+
+.querop-step__li {
+    padding: 8px;
+
+    &.querop-step__li--active {
+        background-color: #F2F2F2;
+        box-shadow: -4px 0 0 $color-header-bg;
     }
 }

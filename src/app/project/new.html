@@ -1,0 +1,180 @@
+<div class="main" ng-controller="ProjectNewController as projectNewController">
+    <div>
+        <acme-navbar />
+    </div>
+    <header class="jumbotron jumbotron-fluid pb-4 mb-0 querop-header-pg">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <strong>Projetos</strong>
+                    <h1 class="h2">Criar Projeto</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row py-5">
+                <ul class="col-md-3">
+                    <li>
+                        <a class="querop-step" ng-click="projectNewController.changeForm('introduction')"
+                            ng-class="{'current': projectNewController.displayIntrodution}">1. Introdução</a>
+                    </li>
+                    <li>
+                        <a class="querop-step" ng-click="projectNewController.changeForm('subjects')"
+                            ng-class="{'current': projectNewController.displayAppliedSubjects}">2. Matérias Aplicadas</a>
+                    </li>
+                    <li>
+                        <a class="querop-step" ng-click="projectNewController.changeForm('schedule')"
+                            ng-class="{'current': projectNewController.displaySchedule}">3. Cronograma</a>
+                    </li>
+                    <li>
+                        <a class="querop-step" ng-click="projectNewController.changeForm('publish')"
+                            ng-class="{'current': false}">4. Publicar</a>
+                    </li>
+                </ul>
+
+                <div class="col-md-5 offset-md-1" ng-if="projectNewController.displayIntrodution">
+                    <form class="querop-form-cadastro__ptojeto">
+                        <div class="form-group">
+                            <label for="projectPicture" class="h5">Escolha uma foto para ilustrar o projeto</label>
+                            <input type="file" class="form-control-file" id="projectPicture">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectName" class="h5">Qual é o nome do projeto?</label>
+                            <input type="text" class="form-control" id="projectName" aria-describedby="projectName"
+                                placeholder="Nome do Projeto">
+                            <small id="projectName" class="form-text text-muted">Crie um nome objetivo e que chame a
+                                atenção dos alunos</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectName" class="h5">Qual é o tipo de projeto?</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Projetos Práticos</option>
+                                <option>Projetos Práticos</option>
+                                <option>Trabalhos de Conclusão de Curso</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectSummary" class="h5">Resuma o seu Projeto</label>
+                            <textarea class="form-control" id="projectSummary" rows="3"></textarea>
+                        </div>
+
+                        <input type="submit" value="Próximo" class="btn btn-primary"
+                            ng-click="projectNewController.changeForm('subjects')">
+                    </form>
+                </div>
+
+                <div class="col-md-5 offset-md-1" ng-if="projectNewController.displayAppliedSubjects">
+                    <form class="querop-form-cadastro__ptojeto">
+                        <div class="form-group">
+                            <label for="projectCourses" class="h5">Esse projeto será feito para qual curso?</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <select class="form-control" id="projectCourses">
+                                        <option>Administração</option>
+                                        <option>Curso 01</option>
+                                        <option>Curso 02</option>
+                                        <option>Curso 03</option>
+                                        <option>Curso 04</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="#">Adicionar outro Curso</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectkeyWords" class="h5">Quais palavras-chave representam o projeto?</label>
+                            <input type="text" class="form-control mb-3" id="projectkeyWords"
+                                aria-describedby="projectkeyWords" placeholder="Digite a Palavra-chave">
+                            <button class="btn btn-outline-primary">Inovação x</button>
+                            <button class="btn btn-outline-primary">Inovação x</button>
+                            <button class="btn btn-outline-primary">Inovação x</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectSubjects" class="h5">Quais matérias são aplicadas nesse projeto?</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <select class="form-control" id="projectSubjects">
+                                        <option>Cálculo Aplicado</option>
+                                        <option>Matéria 01</option>
+                                        <option>Matéria 02</option>
+                                        <option>Matéria 03</option>
+                                        <option>Matéria 04</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="#">Adicionar outro Curso</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-link">Voltar</button>
+                        <input type="submit" value="Próximo" class="btn btn-primary"
+                            ng-click="projectNewController.changeForm('schedule')">
+                    </form>
+                </div>
+                <div class="col-md-5 offset-md-1" ng-if="projectNewController.displaySchedule">
+                    <form class="querop-form-cadastro__ptojeto">
+                        <div class="form-group">
+                            <label for="projectDuration" class="h5">Qual a duração desse projeto?</label>
+                            <input type="text" class="form-control mb-3" id="projectDuration"
+                                aria-describedby="projectkeyWords" placeholder="DD/MM/AAAA">
+                        </div>
+
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeWithTerms">
+                            <label class="form-check-label" for="agreeWithTerms">Concordo com os <a href="#">Termos de
+                                    Serviço</a> e com
+                                as <a href="#">Diretrizes de Relacionamento com Alunos</a></label>
+                        </div>
+
+                        <button type="button" class="btn btn-link">Voltar</button>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Publicar Projeto
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h5 class="modal-title text-center h2" id="exampleModalLabel">Parabéns!</h5>
+                                        <p class="h6 text-center">Você publicou seu projeto com sucesso.</p>
+
+                                        <br>
+
+                                        <p class="text-center">
+                                            Agora é só aguardar para que algum
+                                            <br>
+                                            aluno se inscreva nele :)
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary ml-auto mr-auto"
+                                            data-dismiss="modal">Ok</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
