@@ -13,6 +13,12 @@
                 templateUrl: 'app/mentor/mentor.html',
                 controller: 'MentorController',
                 controllerAs: 'mentor'
+            })
+            .state('student', {
+                url: '/student',
+                templateUrl: 'app/student/student.html',
+                controller: 'StudentController',
+                controllerAs: 'student'
             });
 
         $urlRouterProvider.otherwise('/mentor');

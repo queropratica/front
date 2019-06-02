@@ -3,10 +3,10 @@
 
     angular
         .module('angularSeedApp')
-        .controller('MainController', MainController);
+        .controller('StudentController', StudentController);
 
     /** @ngInject */
-    function MainController(projectFactory) {
+    function StudentController(projectFactory) {
         var vm = this;
 
         vm.subjects = [
