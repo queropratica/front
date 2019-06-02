@@ -201,7 +201,7 @@
   padding: 8px;
 }
 /* line 196, ../sass/queropratica.scss */
-.querop-step__li.querop-step__li--active {
+.querop-step__li.active {
   background-color: #F2F2F2;
   box-shadow: -4px 0 0 #3870E1;
 }

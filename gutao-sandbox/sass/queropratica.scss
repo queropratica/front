@@ -193,7 +193,7 @@ $color-header-bg: #3870E1;
 .querop-step__li {
     padding: 8px;
 
-    &.querop-step__li--active {
+    &.active {
         background-color: #F2F2F2;
         box-shadow: -4px 0 0 $color-header-bg;
     }
