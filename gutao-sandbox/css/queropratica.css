@@ -253,3 +253,10 @@
   border-radius: 5px;
   padding: 0 38px;
 }
+
+/* line 242, ../sass/queropratica.scss */
+.querop-header__bg__leafs {
+  background-image: url("../img/folhas.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
