@@ -1,4 +1,4 @@
-<div class="main">
+<div class="main" ng-controller="StudentController as studentController">
     <div>
         <acme-navbar />
     </div>
@@ -34,45 +34,11 @@
                             </div>
                         </div>
                         <div class="card-deck">
-                            <div class="card">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Gerenciando ferramentas ágeis dentro de projetos</h5>
-                                    <strong>Projeto Prático</strong>
-                                    <p class="card-text">Carlos da Silva, Lucas Silva e Silva</p>
-                                </div>
-                                <a href="" class="btn btn-outline-primary">Acessar</a>
-                                <div class="card-footer">
-                                    <small class="text-muted">Publicado: 01/06/2019</small>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Gerenciando ferramentas ágeis dentro de projetos</h5>
-                                    <strong>Projeto Prático</strong>
-                                    <p class="card-text">Carlos da Silva, Lucas Silva e Silva</p>
-                                </div>
-                                <a href="" class="btn btn-outline-primary">Acessar</a>
-                                <div class="card-footer">
-                                    <small class="text-muted">Publicado: 01/06/2019</small>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Gerenciando ferramentas ágeis dentro de projetos</h5>
-                                    <strong>Projeto Prático</strong>
-                                    <p class="card-text">Carlos da Silva, Lucas Silva e Silva</p>
-                                </div>
-                                <a href="" class="btn btn-outline-primary">Acessar</a>
-                                <div class="card-footer">
-                                    <small class="text-muted">Publicado: 01/06/2019</small>
-                                </div>
+                            <div ng-repeat="project in studentController.projects">
+                                <main-card item="project"></main-card>
                             </div>
                         </div>
                     </div>
-
 
                     <nav aria-label="Page navigation example">
                         <ul class="pagination justify-content-center">
@@ -142,9 +108,9 @@
             <div class="row mt-5">
                 <h2 class="h4 mb-4">Profissionais que podem te ajudar</h2>
                 <div class="card-deck">
-                    <card-mentor></card-mentor>
-                    <card-mentor></card-mentor>
-                    <card-mentor></card-mentor>
+                    <div ng-repeat="mentor in studentController.mentors">
+                        <card-mentor item="mentor"></card-mentor>
+                    </div>
                 </div>
             </div>
         </div>

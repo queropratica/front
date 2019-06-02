@@ -1,12 +1,12 @@
 <div class="card">
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
-        <h5 class="card-title">Gerenciando ferramentas ágeis dentro de projetos</h5>
-        <strong>Projeto Prático</strong>
-        <p class="card-text">Carlos da Silva, Lucas Silva e Silva</p>
+        <h5 class="card-title">{{vm.item.title}}</h5>
+        <strong>{{vm.item.summary}}</strong>
+        <p class="card-text">{{vm.item.owner}}</p>
     </div>
     <a href="" class="btn btn-outline-primary">Acessar</a>
     <div class="card-footer">
-        <small class="text-muted">Publicado: 01/06/2019</small>
+        <small class="text-muted">Publicado: {{vm.item.publishedAt}}</small>
     </div>
 </div>
