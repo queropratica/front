@@ -6,7 +6,8 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="h3">Meus Projetos <a href="" class="btn btn-light">+ Novo Projeto</a></h1>
+                    <h1 class="h3">Meus Projetos <a href="" class="btn btn-light"
+                        ng-click="mentorController.redirectToCreateProject()">+ Novo Projeto</a></h1>
                 </div>
             </div>
         </div>
@@ -18,54 +19,8 @@
                 <div class="col">
                     <div class="row mb-5">
                         <div class="card-deck">
-                            <div class="card">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Gerenciando ferramentas ágeis dentro de projetos</h5>
-                                    <strong>Projeto Prático</strong>
-                                    <p class="card-text">Carlos da Silva, Lucas Silva e Silva</p>
-                                </div>
-                                <a href="" class="btn btn-outline-primary">Acessar</a>
-                                <div class="card-footer">
-                                    <small class="text-muted">Publicado: 01/06/2019</small>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Gerenciando ferramentas ágeis dentro de projetos</h5>
-                                    <strong>Projeto Prático</strong>
-                                    <p class="card-text">Carlos da Silva, Lucas Silva e Silva</p>
-                                </div>
-                                <a href="" class="btn btn-outline-primary">Acessar</a>
-                                <div class="card-footer">
-                                    <small class="text-muted">Publicado: 01/06/2019</small>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Gerenciando ferramentas ágeis dentro de projetos</h5>
-                                    <strong>Projeto Prático</strong>
-                                    <p class="card-text">Carlos da Silva, Lucas Silva e Silva</p>
-                                </div>
-                                <a href="" class="btn btn-outline-primary">Acessar</a>
-                                <div class="card-footer">
-                                    <small class="text-muted">Publicado: 01/06/2019</small>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Gerenciando ferramentas ágeis dentro de projetos</h5>
-                                    <strong>Projeto Prático</strong>
-                                    <p class="card-text">Carlos da Silva, Lucas Silva e Silva</p>
-                                </div>
-                                <a href="" class="btn btn-outline-primary">Acessar</a>
-                                <div class="card-footer">
-                                    <small class="text-muted">Publicado: 01/06/2019</small>
-                                </div>
-                            </div>
+                            <main-card item="project" class="card" ng-repeat="project in mentorController.projects">
+                            </main-card>
                         </div>
                     </div>
 

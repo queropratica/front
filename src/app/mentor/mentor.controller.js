@@ -6,8 +6,14 @@
         .controller('MentorController', MentorController);
 
     /** @ngInject */
-    function MentorController(projectFactory, $scope) {
+    function MentorController(projectFactory, $scope, $state) {
         var vm = this;
+
+        vm.redirectToCreateProject = redirectToCreateProject
+
+        function redirectToCreateProject () {
+            $state.go('projectCreation')
+        }
 
         $scope.disqusConfig = {
             disqus_shortname: 'https-queropratica-github-io',
