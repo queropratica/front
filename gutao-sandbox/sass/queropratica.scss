@@ -199,3 +199,30 @@ $color-header-bg: #3870E1;
         box-shadow: -4px 0 0 $color-header-bg;
     }
 }
+
+.querop-header-index {
+    position: relative;
+}
+
+.querop-p-blue-sub-title {
+    color: $color-link-current;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.querop-h-index {
+    margin: 63px auto 8px;
+}
+
+.querop-p-blue-sub-title {
+    margin: 0 auto;
+}
+
+.querop-ilustra-index {
+    background-image: url(../img/ilustracao-da-home-quero-pratica.jpeg);
+    background-position: 47% center;
+    background-repeat: no-repeat;
+    background-size: 659px;
+    padding-bottom: 210px !important;
+    background-color: #fff;
+}
