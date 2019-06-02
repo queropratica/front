@@ -8,6 +8,12 @@
     /** @ngInject */
     function routeConfig($stateProvider, $urlRouterProvider) {
         $stateProvider
+            .state('home', {
+                url: '/',
+                templateUrl: 'app/home/home.html',
+                controller: 'HomeController',
+                controllerAs: 'home'
+            })
             .state('mentor', {
                 url: '/mentor',
                 templateUrl: 'app/mentor/mentor.html',
@@ -19,6 +25,12 @@
                 templateUrl: 'app/project/new.html',
                 controller: 'ProjectNewController',
                 controllerAs: 'newProject'
+            })
+            .state('manageProject', {
+                url: '/project/manage',
+                templateUrl: 'app/project/manage.html',
+                controller: 'ProjectManageController',
+                controllerAs: 'manageProject'
             })
             .state('student', {
                 url: '/student',

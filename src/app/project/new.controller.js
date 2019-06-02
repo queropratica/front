@@ -3,16 +3,32 @@
 
     angular
         .module('angularSeedApp')
-        .controller('MentorController', MentorController);
+        .controller('ProjectNewController', ProjectNewController);
 
     /** @ngInject */
-    function MentorController(projectFactory, $scope, $state) {
+    function ProjectNewController(projectFactory, $scope) {
         var vm = this;
 
-        vm.redirectToCreateProject = redirectToCreateProject
+        vm.changeForm = changeForm
 
-        function redirectToCreateProject () {
-            $state.go('projectCreation')
+        function changeForm (type) {
+            if(type === 'introduction') {
+                vm.displayIntrodution = true
+                vm.displaySchedule = false
+                vm.displayAppliedSubjects = false
+            }
+
+            if(type === 'subjects') {
+                vm.displayAppliedSubjects = true
+                vm.displayIntrodution = false
+                vm.displaySchedule = false
+            }
+
+            if(type === 'schedule') {
+                vm.displaySchedule = true
+                vm.displayAppliedSubjects = false
+                vm.displayIntrodution = false
+            }
         }
 
         $scope.disqusConfig = {

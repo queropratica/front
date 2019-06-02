@@ -1,4 +1,4 @@
-<div class="main" ng-controller="ProjectNewController as projectNewController">
+<div class="main" ng-controller="HomeController as homeController">
     <div>
         <acme-navbar />
     </div>
@@ -172,7 +172,7 @@
                 <div class="col-md-5 offset-md-1">
                     <h2 class="h4 mb-5">Palavras-Chave</h2>
                     <div>
-                        <a ng-repeat="subject in mentorController.subjects track by subject._id" href=""
+                        <a ng-repeat="subject in homeController.subjects track by subject._id" href=""
                             class="btn btn-outline-secondary m-1">{{subject.name}}</a>
                     </div>
                 </div>
@@ -185,9 +185,7 @@
             <div class="row mt-5">
                 <h2 class="h4 mb-5 col-12">Projetos Relacionados</h2>
                 <div class="card-deck">
-                    <div ng-repeat="project in mentorController.projects">
-                        <main-card item="project"></main-card>
-                    </div>
+                    <main-card item="project" class="card" ng-repeat="project in homeController.projects"></main-card>
                 </div>
             </div>
         </div>

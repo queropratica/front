@@ -3,10 +3,10 @@
 
     angular
         .module('angularSeedApp')
-        .controller('ProjectNewController', ProjectNewController);
+        .controller('HomeController', HomeController);
 
     /** @ngInject */
-    function ProjectNewController(projectFactory, $scope) {
+    function HomeController(projectFactory, $scope) {
         var vm = this;
 
         $scope.disqusConfig = {
