@@ -26,6 +26,12 @@
                 controller: 'ProjectNewController',
                 controllerAs: 'newProject'
             })
+            .state('manageProject', {
+                url: '/project/manage',
+                templateUrl: 'app/project/manage.html',
+                controller: 'ProjectManageController',
+                controllerAs: 'manageProject'
+            })
             .state('student', {
                 url: '/student',
                 templateUrl: 'app/student/student.html',
