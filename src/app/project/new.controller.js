@@ -38,7 +38,7 @@
                 text: "Agora é só aguardar para que algum aluno se inscreva nele :)",
                 type: "success",
                 showCancelButton: false,
-                confirmButtonColor: "#A5DC86",
+                confirmButtonColor: "#1C7CD5",
                 confirmButtonText: "Show !",
                 closeOnConfirm: true}, 
              function(){ 
