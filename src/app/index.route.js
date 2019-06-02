@@ -45,7 +45,7 @@
                 controllerAs: 'student'
             });
 
-        $urlRouterProvider.otherwise('/mentor');
+        $urlRouterProvider.otherwise('/');
     }
 
 })();
