@@ -6,8 +6,14 @@
         .controller('MentorController', MentorController);
 
     /** @ngInject */
-    function MentorController(projectFactory) {
+    function MentorController(projectFactory, $scope) {
         var vm = this;
+
+        $scope.disqusConfig = {
+            disqus_shortname: 'https-queropratica-github-io',
+            disqus_identifier: 'mentor_screen_',
+            disqus_url: 'https://queropratica.github.io'
+        };
 
         vm.subjects = [
             {'_id': 1, 'name': 'Lean'},
